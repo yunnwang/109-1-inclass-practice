@@ -1,0 +1,31 @@
+---
+title: "課堂練習模版"
+author: "Wangyun"
+date: "2020-11-05"
+output: output_format
+params:
+  id: "410882014"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Your code
+
+```{r}
+library(stringr)
+library(glue)
+```
+
+```{r}
+lubridate::ymd(c("民國108年12月5日", "民國98年10月5日"))
+```
+```{r}# 目標是前面的唧唧
+target_regex <- "唧唧"
+pattern <- glue::glue("^{target_regex}")
+print(pattern)
+str_view(phrase, pattern)
+
+```
+
