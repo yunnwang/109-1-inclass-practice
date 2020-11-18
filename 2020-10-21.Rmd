@@ -1,0 +1,46 @@
+---
+title: "課堂練習模版"
+author: "Wangyun"
+date: "2020-10-21"
+output: output_format
+params:
+  id: "410882014"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Your code
+
+```{r}
+a<-15
+b<-a
+y<-6
+c<-y
+
+```
+```{r}
+num1 <- 5
+vNum1 <- c(2,5)
+vNum2 <- c(2, num1)
+```
+
+
+```{r}
+heightsOftheEntireClassroom <- c()
+
+```
+
+```{r}
+heightOfAStudentComingInsideTheClassroom <- sample(165:200,1)
+```
+
+```{r}
+heightsOftheEntireClassroom <-
+  c(
+    heightsOftheEntireClassroom,
+    heightOfAStudentComingInsideTheClassroom
+  )
+```
+

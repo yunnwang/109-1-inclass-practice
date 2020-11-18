@@ -1,0 +1,62 @@
+---
+title: "課堂練習模版"
+author: "Wangyun"
+date: "2020-10-14"
+output: output_format
+params:
+  id: "410882014"
+---
+```{r}
+num <- c(1.5, 2, 3)
+int <- c(1L, 3L, -2L)
+char <- c("1.5","2","3")
+logi <- c(T,T,F)
+
+typeof(num)
+typeof(int)
+typeof(char)
+```
+
+
+
+
+```{r}
+"\u0928\u092e\u0938\u094d\u0924\u0947 \u0926\u0941\u0928\u093f\u092f\u093e"
+```
+```{r}
+# 10位學生的主系
+majors10_char <- c('經濟學系','社會學系','社會學系','經濟學系','經濟學系','社會學系','經濟學系','經濟學系','經濟學系','社會學系')
+
+typeof(majors10_char)
+class(majors10_char)
+```
+
+
+```{r}
+majors10_factor <- factor(majors10_char)
+# 或
+majors10_factor <- factor(
+  c('經濟學系','社會學系','社會學系','經濟學系','經濟學系','社會學系','經濟學系','經濟學系','經濟學系','社會學系')
+)
+
+typeof(majors10_factor)
+class(majors10_factor)
+```
+```{r}
+num <- c(1.5, 2, 3)
+int <- c(1L, 3L, -2L)
+char <- c("1.5","2","3")
+logi <- c(T,T,F)
+
+typeof(num)
+typeof(int)
+typeof(char)
+```
+
+
+```{r}
+
+typeof(logi)
+```
+
+
