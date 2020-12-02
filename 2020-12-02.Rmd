@@ -1,0 +1,27 @@
+---
+title: "課堂練習模版"
+author: "yunnwang_410882014"
+date: "2020-12-02"
+output: output_format
+params:
+  id: "410882014"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Your code
+
+```{r}
+df_example[c(1,4), c("name","residence")]
+
+# 只使用list工具
+list(
+  name=df_example$name[c(1,4)],
+  residence=df_example$residence[c(1,4)]
+)
+# 要小心以下用法是error
+df_example[c("name","residence")][c(1,4)]
+```
+
