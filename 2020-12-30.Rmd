@@ -1,0 +1,101 @@
+---
+title: "課堂練習模版"
+author: "Wangyun"
+date: "2020-12-09"
+output: output_format
+params:
+  id: "410882014"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Your code
+
+```{r}
+library(stringr)
+library(glue)
+```
+
+
+
+```{r}
+Rmdfiles <- c("file1.Rmd", "file2.R", "file3.rmd", "file4.RMD", "myRmd.R")
+SchoolIds <- c("410973029", "410988011", "410974023","410783025","710773022","410788021","410673124","410873051","49988001")
+SchoolIds
+
+```
+
+```{r}
+Rmdfiles
+regexPattern="[Rr][Mm][Dd]"
+str_subset(
+  Rmdfiles, pattern=regexPattern)
+```
+
+```{r}
+SchoolIds
+regexPattern="[4](108|109)(73|88)"
+str_subset(
+  SchoolIds, pattern=regexPattern)
+```
+
+
+```{r}
+sameIdentities <- c("臺北市", "台北市", "台北大學", "臺北大學", "基隆市")
+
+str_view_all(
+  sameIdentities, pattern="[台臺]")
+str_extract(
+  sameIdentities, pattern="[台臺]北市")
+
+
+```
+
+```{r}
+dragonPeople <-
+  c(
+    "住在台北市的臺北人也常被稱為天龍人")
+str_extract(
+  dragonPeople,
+  pattern="[台臺]北[市人]"
+)
+# 當一個元素值內的文字規律可多次出現時用_all來一網打盡，否則只處理第一個出現的規律
+str_extract_all(
+  dragonPeople,
+  pattern="[台臺]北[市人]"
+)
+```
+
+
+```{r}
+Rmdfiles # length=5
+str_replace(
+  Rmdfiles,
+  pattern = "[Rr][Mm][Dd]",
+  replacement = "Rmd"
+)
+```
+
+```{r}
+addresses <- c(
+  '臺中市后里區公館里尾社路385號',
+  '新竹市東區科學園路125號1樓',
+  '新竹市北區竹光路99號',
+  '金門縣金城鎮賢庵里山前33號',
+  '臺中市南屯區工業區二十四路23號1樓')
+```
+
+```{r}
+
+```
+
+
+```{r}
+str_extract(
+  addresses,
+  "(?<=[縣市])[\u4E00-\u9FFF]+[區鎮]"
+)
+```
+
